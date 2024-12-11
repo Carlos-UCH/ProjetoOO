@@ -27,11 +27,8 @@ pip install fpdf
 
 <h4>First degree equation</h4>
 
-$$
-
 ax + b = 0
 
-$$
 
 ~~~
 #3x - 6 = 0
@@ -41,11 +38,8 @@ eq1 = EqPrimeiroGrau(3, -6)
 
 <h4>Quadratic Equation</h4>
 
-$$
-
 ax^2+bx+c=0 
 
-$$
 
 ~~~
 #x^2 - 2x - 3 = 0
@@ -54,11 +48,7 @@ eq2 = EqSegundoGrau(1, -2, -3)
 
 <h4>Cubic equation</h4>
 
-$$
-
 ax^3+bx^2+cx+d=0
-
-$$
 
 ~~~
 #x^3 - 4x^2 + 6x - 3 = 0
