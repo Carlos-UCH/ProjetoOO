@@ -1,7 +1,8 @@
 from abc import ABC, abstractmethod
 import matplotlib.pyplot as plt
 import os
-
+import math
+import cmath
 
 #pasta dos gráficos
 
@@ -93,10 +94,78 @@ class EqSegundoGrau(Equacao):
 
     
 class EqTerceiroGrau(Equacao):
+
+    def format_complex_result(real_part, im_part):
+    #Formatação do resultado de raízes complexas
+        if real_part == 0 and im_part == 0:
+            return "0"
+
+        number = ""
+
+        if real_part != 0:
+            number += f"{real_part}"
+
+        if im_part > 0:
+            number += f"+{im_part}i"
+
+        elif im_part < 0:
+            number += f"{im_part}i"
+        elif real_part == 0:
+            number = f"{im_part}i"
+
+        return number
+
     def calcular(self):
         a,b,c,d = self.coeficientes
-        return "Não implementado"
         
+        if a == 0:
+            return "O coeficiente a não pode ser igual a zero"
+
+        roots = []
+
+        A = b/a
+        B = c/a
+        C = d/a
+
+        p = B - A**2/3
+        q = C + 2*A**3/27 - A*B/3
+
+        #discriminante
+        delta = q**2/4 + p**3/27
+
+        if delta >=0:
+            y1 = math.cbrt(-q/2 + math.sqrt(delta)) + math.cbrt(-q/2 - math.sqrt(delta))
+            roots.append(str(y1 - A/3))
+
+            delta2 = -3 * y1**2 - 4 * p
+
+            if delta2 >=0:
+                roots.append(str((-y1 + math.sqrt(delta2))/2 - A/3))
+                roots.append(str((-y1 - math.sqrt(delta2))/2 - A/3))
+
+            else:
+
+                #raízes complexas
+
+                real_part = -y1/2
+                im_part = math.sqrt(abs(delta2))/2
+
+                roots.append(format_complex_result(real_part - A/3, im_part))
+                roots.append(format_complex_result(real_part - A/3, -im_part))
+        else:
+
+            #euler
+
+            rho = math.sqrt(q**2/4 + abs(delta))
+            theta = math.acos(-q/(2*rho))
+            roots.append(str(f"{((2* (rho**(1/3)) * math.cos(theta / 3) - A / 3)):.1f}"))
+            roots.append(str(f"{(2 * (rho**(1/3)) * math.cos((theta + 2 * math.pi) / 3) - A / 3):.1f}"))
+            roots.append(str(f"{(2 * (rho**(1/3)) * math.cos((theta + 4 * math.pi) / 3) - A / 3):.1f}"))
+            
+            self.resultado = roots
+            return self.resultado
+
+            
     def plotar_grafico(self):
         a,b,c,d = self.coeficientes
         x = [i for i in range(-10,11)]
