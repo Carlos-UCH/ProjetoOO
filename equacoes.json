@@ -1,0 +1,11 @@
+[
+    {
+        "tipo": "EqSegundoGrau",
+        "coeficientes": [
+            1.0,
+            8.0,
+            15.0
+        ],
+        "resultado": null
+    }
+]
