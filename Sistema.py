@@ -15,7 +15,7 @@ class Sistema:
         return self.__equacoes
     #Setter
     def set_equacoes(self, novas_equacoes):
-        if ininstance(novas_equacoes, list):
+        if isinstance(novas_equacoes, list):
             self.__equacoes = novas_equacoes
         else: 
             raise ValueError("O valor passado não é uma lista")

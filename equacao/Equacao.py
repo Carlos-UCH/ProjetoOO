@@ -161,7 +161,7 @@ class EqTerceiroGrau(Equacao):
                     roots.append(f"{((-y1 + math.sqrt(delta2)) / 2 - A / 3):.2f}")
                     roots.append(f"{((-y1 - math.sqrt(delta2)) / 2 - A / 3):.2f}")
                 else:
-                    root.append("Raízes complexas")
+                    roots.append("Raízes complexas")
             else:
                 # Raízes complexas
                 real_part = -y1 / 2
