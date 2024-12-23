@@ -113,8 +113,8 @@ See previous equations and results
 ~~~
 5. Sair
 ~~~
-===========================================
+============================================================================================
 
-<b>All generated graphs are in </b> /graphs <b>and the total report with results, coefficients and graphs are in</b> /graphs/results
+<b>All generated graphs are in </b> /graficos <b>and the total report with results, coefficients and graphs are in</b> /graficos/resultados
 
-===========================================
+============================================================================================
