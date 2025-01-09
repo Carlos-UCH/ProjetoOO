@@ -23,47 +23,14 @@ pip install fpdf
 
 <h2>Usage</h2>
 
-<p>1. Edit the main.py file and add your equations:</p>
-
-<h4>First degree equation</h4>
-
-ax + b = 0
-
-
-~~~
-#3x - 6 = 0
-eq1 = EqPrimeiroGrau(3, -6)  
-~~~
-
-
-<h4>Quadratic Equation</h4>
-
-ax^2+bx+c=0 
-
-
-~~~
-#x^2 - 2x - 3 = 0
-eq2 = EqSegundoGrau(1, -2, -3) 
-~~~
-
-<h4>Cubic equation</h4>
-
-ax^3+bx^2+cx+d=0
-
-~~~
-#x^3 - 4x^2 + 6x - 3 = 0
-eq3 = EqTerceiroGrau(1, -4, 6, -3) 
-
-~~~
-
-<p>2. Run the main.py file:</p> 
+<p>1. Run the main.py file:</p> 
 
 ~~~
 python3 main.py
 ~~~
 
 
-<p>3. Running the system</p> 
+<p>2. Running the system</p> 
 
 ~~~
 0. *CASO FECHOU O PROGRAMA (CARREGAR)*
@@ -73,7 +40,6 @@ All data will be loaded from json to the current file, synchronizing previous re
 ~~~
 1. Adicionar Equações
 ~~~
-
 
 
 Each type of equation for finding the root needs to provide the coefficients separated by spaces.
@@ -113,8 +79,8 @@ See previous equations and results
 ~~~
 5. Sair
 ~~~
-============================================================================================
+========================================================================================
 
 <b>All generated graphs are in </b> /graficos <b>and the total report with results, coefficients and graphs are in</b> /graficos/resultados
 
-============================================================================================
+========================================================================================
