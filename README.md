@@ -35,7 +35,9 @@ python3 main.py
 ~~~
 0. *CASO FECHOU O PROGRAMA (CARREGAR)*
 ~~~
-All data will be loaded from json to the current file, synchronizing previous results
+IT IS NECESSARY TO HAVE ALREADY MADE SOME EQUATION AND SAVED IT IN JSON. 
+
+All data will be loaded from json to the current file, synchronizing previous results.
 
 ~~~
 1. Adicionar Equações
